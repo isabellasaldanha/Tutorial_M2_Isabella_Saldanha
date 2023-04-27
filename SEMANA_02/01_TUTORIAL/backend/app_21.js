@@ -16,10 +16,10 @@ app.get('/usuarios', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT matricula, nome, strftime("%d/%m/%Y",data_admissao) AS "data de contratação" FROM usuario ORDER BY nome COLLATE NOCASE';
+var sql = 'SELECT matricula, nome, strftime("%d/%m/%Y",data_admissao) AS "data de contratação" FROM usuario ORDER BY nome COLLATE NOCASE';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
-		    throw err;
+			throw err;
 		}
 		res.json(rows);
 	});
@@ -32,10 +32,10 @@ app.get('/projetos', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT nome, strftime("%d/%m/%Y",data_inicio) AS "data de início", strftime("%d/%m/%Y",data_fim) AS "data de término" FROM projeto ORDER BY nome COLLATE NOCASE';
+var sql = 'SELECT nome, strftime("%d/%m/%Y",data_inicio) AS "data de início", strftime("%d/%m/%Y",data_fim) AS "data de término" FROM projeto ORDER BY nome COLLATE NOCASE';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
-		    throw err;
+			throw err;
 		}
 		res.json(rows);
 	});
@@ -48,14 +48,14 @@ app.get('/alocacoes', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = "SELECT  strftime('%d/%m/%Y',data_alocacao) AS 'data de alocação', projeto.nome, usuario.nome, qtde_horas \
-             FROM alocacao \
-             INNER JOIN projeto ON alocacao.cod_projeto = projeto.cod_projeto  \
-             INNER JOIN usuario ON alocacao.cod_usuario = usuario.cod_usuario  \
-             ORDER BY projeto.nome";
+var sql = "SELECT  strftime('%d/%m/%Y',data_alocacao) AS 'data de alocação', projeto.nome, usuario.nome, qtde_horas \
+			FROM alocacao \
+			INNER JOIN projeto ON alocacao.cod_projeto = projeto.cod_projeto  \
+			INNER JOIN usuario ON alocacao.cod_usuario = usuario.cod_usuario  \
+			ORDER BY projeto.nome";
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
-		    throw err;
+			throw err;
 		}
 		res.json(rows);
 	});
@@ -65,5 +65,5 @@ app.get('/alocacoes', (req, res) => {
 
 /* Inicia o servidor */
 app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+console.log(`Server running at http://${hostname}:${port}/`);
 });
