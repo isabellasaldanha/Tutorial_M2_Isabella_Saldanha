@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>CRUD</title>
   </head>
-  <h1>Listagem de Usuários</h1>
-  <p><a href="/inserir.html">INSERIR NOVO USUÁRIO</a></p>
+  <h1>Inserir dados curriculo</h1>
+  <p><a href="/inserir.html">INSERIR NOVO DADO</a></p>
 
   <script>
-    const url = '/usuarios';
+    const url = '/TblPessoa';
   
     fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        let usuarios = data;
+        let TblPessoa = data;
         let saida = '';
-        usuarios.map(function(usuario) {
-          saida += '<strong> '+ `${usuario.nome_completo}` + '</strong> ' + `${usuario.email}`  + ' - ' +  `${usuario.telefone}` + ' - ' +  `${usuario.idade}`;
-          saida += ' - <a href="/atualizar.html?userId=' + `${usuario.userId}` + '">EDITAR</a>';
-          saida += ' | <a href="/removeUsuario?userId='+`${usuario.userId}`+'">REMOVER</a></br>';
+        TblPessoa.map(function(pessoa) {
+          saida += '<strong> '+ `${pessoa.NOME_PESSOA}`;
+          saida += ' - <a href="/atualizar.html?ID_PESSOA=' + `${pessoa.ID_PESSOA}` + '">EDITAR</a>';
+          saida += ' | <a href="/removeTblPessoa?ID_PESSOA='+`${pessoa.ID_PESSOA}`+'">REMOVER</a></br>';
         });
         document.getElementById('resultado').innerHTML = saida;
       })
@@ -35,5 +35,5 @@
 
   <body>
     <div id="resultado"></div>
-  </body>
+  </body> 
 </html>
