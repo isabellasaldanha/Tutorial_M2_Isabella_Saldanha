@@ -47,3 +47,28 @@ h1 {
   list-style-type: square;
 }
 
+/*seletores para desktops*/
+@media screen and (max-width: 1128px) {
+	#conteudo{ 
+	   width: 70%;
+	   background:rgb(255, 246, 193);
+	}
+}
+
+/*seletores para tablets*/
+@media screen and (max-width: 768px) {
+	#conteudo{ 
+	   width: 50%;
+	   background:rgb(244, 196, 244);
+	}
+}
+
+/*seletores para celurares*/
+@media screen and (max-width: 520px) {
+	#conteudo{ 
+	   width: 100%;
+	   background:rgb(202, 243, 255);
+       float: none;
+       height: auto;
+	}
+}
