@@ -22,12 +22,16 @@ app.get('/usuarios', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	var sql = 'SELECT * FROM usuario ORDER BY nome_completo COLLATE NOCASE';
+	sql = "INSERT INTO usuario (nome_completo, email, telefone, idade) VALUES ('" + req.body.nome + "', '" + req.body.email + "', " + req.body.telefone + ", " + req.body.idade + ")";
+	sql = "UPDATE usuario SET nome_completo='" + req.body.nome + "', email = '" + req.body.email + "' , telefone='" + req.body.telefone + ", idade = '" + req.body.idade + "' ,' WHERE userId='" + req.body.userId + "'";
+	sql = "DELETE FROM usuario WHERE userId='" + req.query.userId + "'";
 		db.all(sql, [],  (err, rows ) => {
 			if (err) {
 				throw err;
 			}
 			res.json(rows);
 		});
+		//em update, insert e delete aqui tem que ter o res.write('<p>USUARIO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
 		db.close(); // Fecha o banco
 });
 
