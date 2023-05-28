@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Curriculo.css">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 </head>
 <body>
   <div id="conteudo">
@@ -51,12 +52,10 @@
       </ul>
     </div>
     </div>
-    
     <script>
-      setInterval(function(){
-        $("h1").fadeOut();
-        $("h1").fadeIn();
-      },10);
+      $(document).ready(function() { 
+      $('h1').effect('bounce', { times: 3 }, 500);
+      });
 
       $("img").click(function(){
         alert("Olá, eu sou a Isabella!");
