@@ -1,11 +1,9 @@
-/* Curriculo.css */
-
 body {
   background-color: pink;
   font-family: Arial, sans-serif;
-  margin: 20px; /* Adiciona margem em todos os lados */
+  margin: 20px; 
   padding: 0;
-  box-sizing: border-box; /* Inclui a margem na largura total do body */
+  box-sizing: border-box; 
 }
 
 .rosa{
@@ -145,7 +143,6 @@ body {
 }
 
 
-/* Estilização do alerta */
 .alerta {
   background-color: #f9ca3c;
   color: #4a148c;
@@ -154,7 +151,6 @@ body {
   text-align: center;
 }
 
-/* Estilização do link */
 a {
   color: #4a148c;
   text-decoration: none;
