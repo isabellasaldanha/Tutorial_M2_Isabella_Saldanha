@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Currículo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Curriculo.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="conteudo">
+    <div class="rosa">
+      <div class="pessoa">
+        <h1>Isabella Fernandes Saldanha</h1>
+        <div class="imagem"><img src="Minha foto.jfif" alt="imagem Isabella" id="img"></div>
+      </div>
+
+      <div class="dados_pessoais">
+        <h1>Dados Pessoais</h1>
+        <h2>Email: bellafernandessaldanha@hotmail.com</h2>
+        <h3>Telefone: (11) 961511206</h3>
+      </div>
+          
+      <div class="formacoes">
+        <h1>Formações</h1>
+        <h2>Inteli - Engenharia de Software - 2023-2027</h2>
+      </div>
+    </div>
+
+    <div class="amarelo">
+      <div class="descricao">
+        <h1>Descrição</h1>
+        <h2>Em 2023 fui contemplada com uma bolsa integral para cursar Engenharia de Software na prestigiada instituição Inteli, onde atualmente estudo. Meus antecedentes acadêmicos incluem a conclusão dos cursos técnicos de Comércio e Guia Turístico pela ETEC. Durante minha trajetória, tive o privilégio de participar em projetos sociais como coordenadora de marketing, nos quais pude aprimorar habilidades de marketing, oratória, planejamento e liderança. 
+          Ademais, meu amor pela matemática me conduziu à produção de um artigo científico premiado internacionalmente pela Sociedade de Honra de Matemática dos Estados Unidos. Em 2022, tive a honra de ser selecionada para representar o Brasil no Space Camp, um programa patrocinado pela Embaixada dos Estados Unidos. Por fim, fui reconhecida com prêmios em quatro feiras científicas e identifiquei seis asteroides preliminares.</h2>
+      </div>
+    </div>
+ 
+
+  <div class="lilas">
+    <div class="realizacoes">
+      <h1>Realizações</h1>
+      <h2>Medalha de Prata - FITEC</h2>
+      <h3>MU Apha Tetha Winner</h3>
+    </div>
+      
+    <div class="habilidades">
+      <h1>Habilidades</h1>
+      <h2>JavaScript</h2>
+      <h3>Python</h3>
+      <h4>HTML</h4>
+    </div>
+      
+    <div class="experiencias">
+      <h1>Experiências</h1>
+      <h2>U.S. Department of State - Trainee - 2023 - 2027</h2>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() { 
+      $('h1').effect('bounce', { times: 3 }, 500);
+    });
+
+    $("img").click(function(){
+      alert("Olá, eu sou a Isabella!");
+    });
+  </script>
+</body>
+</html>
