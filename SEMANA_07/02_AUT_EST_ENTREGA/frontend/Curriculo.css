@@ -1,0 +1,157 @@
+body {
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  margin: 20px; 
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+.rosa{
+  position: relative;
+  background: deeppink;
+  padding: 20px;
+  box-shadow: 0px 4px 8px hsla(0, 5%, 21%, 0.783);
+  width: 300px;
+}   
+
+.lilas{
+  position: relative;
+  background: lightsteelblue;
+  padding: 20px;
+  box-shadow: 0px 4px 8px hsla(0, 5%, 21%, 0.783);
+  width: 300px;
+}   
+
+.amarelo{
+  position: relative;
+  background: lightgoldenrodyellow;
+  padding: 20px;
+  box-shadow: 0px 4px 8px hsla(0, 5%, 21%, 0.783);
+  width: 300px;
+}  
+
+/* Estilo do conteúdo principal */
+#conteudo {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.pessoa {
+  text-align: center;
+  color: white;
+}
+
+.pessoa h1 {
+  color: lightcyan;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.imagem {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+}
+
+.descricao h1 {
+  color: royalblue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.descricao h2 {
+  color: purple;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.formacoes h1 {
+  color: lightcyan;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.formacoes h2,
+.formacoes h3 {
+  color: lightgoldenrodyellow;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.dados_pessoais h1 {
+  color: lightcyan;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dados_pessoais h2,
+.dados_pessoais h3 {
+  color: lightgoldenrodyellow;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.realizacoes h1 {
+  color: royalblue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.realizacoes h2,
+.realizacoes h3 {
+  color: purple;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.habilidades h1 {
+  color: royalblue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.habilidades h2,
+.habilidades h3,
+.habilidades h4 {
+  color: purple;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.experiencias h1 {
+  color: royalblue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.experiencias h2 {
+  color: purple;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+.alerta {
+  background-color: #f9ca3c;
+  color: #4a148c;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  color: #4a148c;
+  text-decoration: none;
+}

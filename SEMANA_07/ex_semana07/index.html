@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tabela</title>
+</head>
+<body>
+    <table id="minhaTabela">
+        <tr>
+          <th>Nome</th>
+          <th>Cidade</th>
+          <th>Fruta</th>
+        </tr>
+        <tr>
+          <td>Isabella</td>
+          <td>São Paulo</td>
+          <td>Laranja</td>
+        </tr>
+        <tr>
+          <td>Marcela</td>
+          <td>Santos</td>
+          <td>Maça</td>
+        </tr>
+      </table>
+      <button onclick="mudarCor()">Mudar Cor da Tabela</button>
+
+      <script>
+            function mudarCor() {
+            var linhasTh = document.getElementsByTagName("th");
+            var linhasTd = document.getElementsByTagName("td");
+            
+            for (var i = 0; i < linhasTh.length; i++) {
+                linhasTh[i].classList.toggle("tabela-rosa");
+            }
+            
+            for (var j = 0; j < linhasTd.length; j++) {
+                linhasTd[j].classList.toggle("tabela-azul");
+            }
+            }
+      </script>
+
+</body>
+</html>
